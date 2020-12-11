@@ -28,12 +28,8 @@ defmodule Day2 do
       }) do
     chars = String.codepoints(p)
 
-    if is_in_first_position(chars, l, f - 1, s - 1) ||
-         is_in_second_position(chars, l, f - 1, s - 1) do
-      true
-    else
-      false
-    end
+    is_in_first_position(chars, l, f - 1, s - 1) ||
+      is_in_second_position(chars, l, f - 1, s - 1)
   end
 
   defp is_in_first_position(characters, letter, first, second) do
